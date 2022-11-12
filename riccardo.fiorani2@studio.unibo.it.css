@@ -1,0 +1,95 @@
+body {
+    font-family: monospace;
+    font-size: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+header {
+    flex-basis: 100%;
+    order: -1;
+    text-align: right;
+    padding: 2% 0;
+    color: purple;
+    border-bottom: 3px solid purple;
+}
+
+nav {
+    flex-basis: 15%;
+    margin: 1% 0 1% 1%;
+    padding: 1% 0;
+    border-bottom: 3px solid purple;
+    border-top: 3px solid purple;
+}
+
+nav>ul {
+    list-style-type: square;
+    text-align: left;
+    line-height: 200%;
+}
+
+nav>ul>li :hover {
+    background-color: purple;
+    color: white;
+    padding: 1%;
+    font-weight: bold;
+}
+
+aside {
+    flex-basis: 20%;
+    color: purple;
+    margin: 2% auto;
+}
+
+section {
+    flex-basis: 50%;
+    order: 1;
+    margin: 2% 1% 2% 0;
+    text-align: left;
+    color: black;
+
+}
+
+footer {
+    order: 2;
+    flex-basis: 100%;
+    padding: 1% 0%;
+    text-align: center;
+    font-size: 80%;
+    color: blueviolet;
+    border-top: 3px solid purple;
+}
+
+header,
+nav {
+    background: linear-gradient(to bottom right, pink, yellow, pink, purple);
+}
+
+nav:hover,
+footer {
+    background: linear-gradient(to top left, pink, yellow, pink, purple);
+}
+
+/*ho aggiunto la media query per ottimizzare la responsiveness della pagina per dispoitivi come tablet e smartphone*/
+
+@media screen and (max-device-width: 768px) {
+    body {
+        align-items: stretch;
+        flex-flow: column nowrap;
+    }
+
+    nav {
+        margin: 1%;
+
+    }
+
+    aside {
+        margin: 2%;
+    }
+
+    section {
+        margin: 2%;
+
+    }
+}
